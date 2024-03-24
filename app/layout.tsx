@@ -1,6 +1,7 @@
 import './globals.css'
 
 import { Suspense } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 
 import Nav from '@/components/nav'
 
@@ -21,6 +22,7 @@ export default function RootLayout({ children }: Props) {
 					<Nav />
 				</Suspense>
 				{children}
+				<Analytics />
 			</body>
 		</html>
 	)
